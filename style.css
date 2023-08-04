@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+} 
+.container{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+}
+nav{
+    background:#000;
+    height: 80px;
+    width: 100%;
+}
+nav img{
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #FFB900;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width:952px){
+    nav img{
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+.acount{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.acount img{
+    margin-bottom: -30px;
+}
+.acount p{
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul li a:hover,nav ul li a.active{
+        background: none;
+        color: #FFB900;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+section{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+}
+section video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 18vw;
+    text-align: center;
+    font-weight: 800;
+    line-height: 0.75em;
+    color: #fff;
+    background: #000;
+    mix-blend-mode: multiply;
+}
+section h2 span{
+    font-size: 0.7em;
+}
+
+.royxat{
+    position: relative;
+    top: 850px;
+    margin-left: 80px;
+}
+.royxat p{
+    max-width: 550px;
+    font-size: 25px;
+}
+.royxat button{
+    padding:10px;
+    width: 200px;
+    background: #FFB900;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.bubbles {
+    transition: 0.5s;
+    position: fixed;
+    display: flex;
+    /* z-index: -1000; */
+}
+.bubbles {
+    transition: 0.5s;
+    position: fixed;
+    display: flex;
+    z-index: -2;
+}
+
+
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #FFB900;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #FFB900,
+        0 0 100px #FFB900;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+::-webkit-scrollbar {
+    position: relative;
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFB900;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-track{
+    background: #000;
+}
+
+::-webkit-scrollbar:hover {
+    width: 6px;
+}
+
+.tillar{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border: none;
+    color: white;
+}
+
+
