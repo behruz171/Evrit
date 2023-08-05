@@ -512,5 +512,11 @@ section h2 span{
         object-fit: cover;
         border: 5px solid #fff;
         border-radius: 10px;
+        transition: 0.3s;
+        transform: scale(1.2);
+        box-shadow: 0 0 10px #FFB900,
+        0 0 25px #FFB900,
+        0 0 40px #FFB900,
+        0 0 70px #FFB900;
     }
 }
