@@ -8,12 +8,14 @@
 .container{
     position: relative;
     width: 100%;
-    height: 200vh;
+    height: 300vh;
 }
 nav{
+    position: fixed;
     background:#000;
     height: 80px;
     width: 100%;
+    z-index: 10;
 }
 nav img{
     line-height: 80px;
@@ -55,14 +57,7 @@ a.active,a:hover{
     display: none;
 }
 
-@media (max-width:952px){
-    nav img{
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
+
 .acount{
     display: inline-block;
     align-items: center;
@@ -77,43 +72,14 @@ a.active,a:hover{
     font-size: 20px;
     color: white;
 }
-@media (max-width:858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        z-index: 3;
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    nav ul li a:hover,nav ul li a.active{
-        background: none;
-        color: #FFB900;
-    }
 
-    #check:checked ~ ul{
-        left: 0;
-    }
-}
 section{
+    display: block;
     z-index: -1;
     position: absolute;
     width: 100%;
     height:100vh;
+    margin-top: 80px;
     overflow: hidden;
 }
 section video{
@@ -150,7 +116,7 @@ section h2 span{
 
 .royxat{
     position: relative;
-    top: 850px;
+    top: 1000px;
     margin-left: 80px;
 }
 .royxat p{
@@ -238,4 +204,229 @@ section h2 span{
     color: white;
 }
 
+.biz_h{
+    height: 50vh;
+    margin-top: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.biz_h1{
+    height: 280px;
+    max-width: 500px;
+    margin-right: 200px;
+    background: white;
+    padding: 30px;
+    border: 3px solid #FFB900;
+    border-radius: 30px;
+    transition:all .5s;
+}
+.biz_h2 img{
+    width: 450px;
+    transition: .5s;
+}
+.biz_h1 h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.biz_h1 p{
+    font-size: large;
+}
+
+.biz_h1:hover{
+    max-width: 700px;
+}
+.biz_h2:hover img{
+    width: 600px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 250px;
+    background: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(10px);
+}
+.cardlar{
+    /* max-width: 100vh; */
+    margin-top: 500px;
+    margin: 40px 80px 0 80px;
+    display: flex;
+}
+
+.cardlar1{
+    margin-top: 500px;
+    margin: 40px 80px 50px 80px;
+    display: flex;
+}
+
+.box {
+    position: relative;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    margin-top: 90px;
+    margin: 0 50px 0 50px;
+    color: #fff;
+    width: 400px;
+    height: 500px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background: rgba(128, 128, 128, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.box img{
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    /* transform: translateZ(50px); */
+}
+.card_tittle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 250px;
+    padding: 0 30px 0 30px;
+}
+
+.card_tittle h2{
+    font-size: 30px;
+}
+.card_tittle p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.lorem{
+    position: relative;
+    top: 300px;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 4px solid #FFB900;
+}
+.malumot{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    top: 310px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.kurs{
+    display: flex;
+    justify-content: center;
+}
+.card_btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: #FFB900;
+    margin: auto;
+
+}
+@media (max-width:952px){
+    nav img{
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        z-index: 3;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        /* background: #2c3e50; */
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        backdrop-filter: blur(10px);
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: #000;
+    }
+    nav ul li a:hover,nav ul li a.active{
+        background: none;
+        color: #FFB900;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .biz_h{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    section h2{
+        background: none;
+        color: #000;
+        animation: animate2 3s ease-out;
+    }
+
+    @keyframes animate2 {
+        0% {
+            filter: blur(8px);
+        }
+        100%{
+            filter: blur(1px);
+        }
+    }
+    .acount p{
+        margin-left: 75px;
+    }
+    .biz_h2{
+        position: relative;
+        left: -100px;
+        /* top: 300px; */
+    }
+    .biz_h2 img{
+        width: 270px;
+    }
+    .biz_h2:hover img{
+        width: 330px;
+    }
+    .biz_h1{
+        height: 600px;
+    }
+
+    .cardlar1{
+        display: none;
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+    }
+    .cardlar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .box{
+        width: 300px;
+        height: 550px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .kurs{
+        position: relative;
+        font-size: 20px;
+    }
+}
