@@ -237,9 +237,61 @@ section h2 span{
 .biz_h1:hover{
     max-width: 700px;
 }
-.biz_h2:hover img{
-    width: 600px;
+.biz_h2{
+    position: relative;
+    width: 300px;
+    height: 300px;
 }
+
+.biz_h2 span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url(img/Rectangle\ 23318.png);
+    background-repeat: no-repeat;
+    animation: anim3 20s linear infinite;
+}
+@keyframes anim3{
+    0%,10%,20%{
+        scale: 1;
+        rotate: 0deg;
+        translate: 0 0;
+        transform-origin: center;
+    }
+    30%,40%{
+        scale: 1;
+        rotate: 0deg;
+        translate: 0 0;
+        transform-origin: center;
+    }
+    50%{
+        scale: 0.5;
+        rotate: 360deg;
+        translate: 80px 0;
+        transform-origin: 50px;
+    }
+    70%{
+        scale: 0.5;
+        rotate: 720deg;
+        translate: -80px 0;
+        transform-origin: -50px;
+    }
+    90%{
+        scale: 2;
+        rotate: 0deg;
+        translate: 0 0;
+        transform-origin: center;
+    }
+    100%{
+        scale: 1;
+        rotate: 0deg;
+        translate: 0 0;
+        transform-origin: center;
+    }
+}
+/* .biz_h2:hover img{
+    width: 600px;
+} */
 .card{
     display: flex;
     justify-content: center;
@@ -493,6 +545,7 @@ section h2 span{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 100px;
     }
     
     section h2{
@@ -611,3 +664,5 @@ section h2 span{
         margin-bottom: 20px;
     }
 }
+
+/* rasm pixel animatatsiy */
