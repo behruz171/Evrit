@@ -12,7 +12,7 @@ function pixel(){
     for (var i = 0; i < h; i++) {
         for (var j = 0; j < w; j++){
         let span = document.createElement('span')
-        let random = Math.random() * 5
+        let random = Math.random() * 2
         let randomFixed = random.toFixed(2)
         document.getElementById('pixel').appendChild(span)
         span.style.left = j * 10 + 'px'
