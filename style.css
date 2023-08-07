@@ -73,8 +73,14 @@ a.active,a:hover{
     color: white;
 }
 
+.vidio_b{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
 section{
-    display: block;
+    /* display: block; */
     z-index: -1;
     position: absolute;
     width: 100%;
@@ -94,30 +100,24 @@ section video{
 section h2{
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 5%;
+    width: 80%;
+    height: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     text-transform: uppercase;
-    font-size: 18vw;
-    text-align: center;
+    font-size: 4vw;
+    text-align: start;
     font-weight: 800;
-    line-height: 0.75em;
-    color: #fff;
-    background: #000;
+    color: #000;
     mix-blend-mode: multiply;
 }
-section h2 span{
-    font-size: 0.7em;
-}
-
 .royxat{
-    position: relative;
-    top: 1000px;
-    margin-left: 80px;
+    position: absolute;
+    top: 350px;
+    margin-left: 5%;
 }
 .royxat p{
     max-width: 550px;
@@ -206,7 +206,8 @@ section h2 span{
 
 .biz_h{
     height: 50vh;
-    margin-top: 1100px;
+    margin-top: 300px;
+    margin-bottom: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,10 +224,7 @@ section h2 span{
     border-radius: 30px;
     transition:all .5s;
 }
-.biz_h2 img{
-    width: 450px;
-    transition: .5s;
-}
+
 .biz_h1 h2{
     margin-bottom: 20px;
     font-size: 40px;
@@ -251,7 +249,7 @@ section h2 span{
     height: 10px;
     background: url(img/Rectangle\ 23318.png);
     background-repeat: no-repeat;
-    animation: anim3 20s linear infinite;
+    animation: anim3 10s linear infinite;
 }
 @keyframes anim3{
     0%,10%,20%{
@@ -269,13 +267,13 @@ section h2 span{
     50%{
         scale: 0.5;
         rotate: 360deg;
-        translate: 25px 0;
+        translate:0 25px;
         transform-origin: 10px;
     }
     70%{
         scale: 0.5;
         rotate: 720deg;
-        translate: -25px 0;
+        translate: 0 -25px;
         transform-origin: -10px;
     }
     90%{
@@ -323,7 +321,7 @@ section h2 span{
     margin: 0 50px 0 50px;
     color: #fff;
     width: 400px;
-    height: 500px;
+    height: 530px;
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
     background: rgba(128, 128, 128, 0.1);
     backdrop-filter: blur(5px);
@@ -380,9 +378,10 @@ section h2 span{
     border-radius: 10px;
     background: #FFB900;
     margin: auto;
+    margin-bottom: 50px;
 
 }
-/* .content_j{
+.content_j{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -396,9 +395,10 @@ section h2 span{
 }
 
 .jamoa{
+    position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 600px;
+    margin-bottom: 400px;
 }
 
 .content_img{
@@ -407,108 +407,33 @@ section h2 span{
     justify-content: center;
     align-items: center;
     margin: 10px;
-    animation: anim2 8s infinite;
 }
 .content_img h2{
     position: absolute;
     text-align: center;
     max-width: 200px;
-    top: 250px;
+    top: 70%;
 }
 .content_img img{
     width: 350px;
     height: 350px;
     border-radius: 20px;
     object-fit: cover;
-    transition: .5s;
+    transition: .3s;
 }
 .content_img img:hover{
     transform: scale(0.9);
 }
 .content_img:nth-child(even){
     top: 200px;
-    animation: anim1 8s infinite;
 }
-@keyframes anim1{
-    0%{
-        top: 0;
-    }
-    50%{
-        top: 200px;
-    }
-    100%{
-        top: 0;
-    }
-}
-@keyframes anim2{
-    0%{
-        top: 200px;
-    }
-    50%{
-        top: 0;
-    }
-    100%{
-        top: 200px;
-    }
-} */
 
-.jamoa{
-    /* overflow-y: scroll; */
-    width: 200px;
-    height: 230px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: Anim 15s linear infinite;
-}
-@keyframes Anim {
-    0% {
-        transform: perspective(1000px) rotateY(0);
-    }
-
-    100% {
-        transform: perspective(1000px) rotateY(360deg);
-    }
-}
-/* .jamoa::-webkit-scrollbar{
-    display: none;
-} */
-.content_j{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-}
-.content_img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(90deg * var(--v))) translateZ(310px);
-}
-.content_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 5px solid #fff;
-    border-radius: 10px;
-    transition: 0.3s;
-    transform: scale(1.2);
-    box-shadow: 0 0 10px #FFB900,
-    0 0 25px #FFB900,
-    0 0 40px #FFB900,
-    0 0 70px #FFB900;
-}
 
 .boglanish{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 300px;
 }
 .b_tittle{
     display: flex;
@@ -556,6 +481,17 @@ section h2 span{
     padding: 10px;
     background: #FFB900;
 }
+
+@media (max-width:1460px) {
+    .content_img img{
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        object-fit: cover;
+        transition: .5s;
+    }
+}
+
 @media (max-width:952px){
     nav img{
         padding-left: 50px;
@@ -563,8 +499,30 @@ section h2 span{
     nav ul li a{
         font-size: 16px;
     }
+    .jamoa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .content_img img{
+        width: 250px;
+        height: 250px;
+        border-radius: 20px;
+        object-fit: cover;
+        transition: .5s;
+    }
+
+    .content_img:nth-child(even){
+        right: 10%;
+        top: 0;
+    }
 }
 @media (max-width:858px){
+    section h2{
+        width: 100%;
+        font-size: 10vw
+    }
     .checkbtn{
         display: block;
     }
@@ -602,7 +560,7 @@ section h2 span{
         flex-direction: column;
         justify-content: center;
         margin-bottom: 100px;
-        margin-top: 1500px;
+        margin-top: 500px;
     }
     
     section h2{
@@ -661,8 +619,7 @@ section h2 span{
         position: relative;
         font-size: 20px;
     }
-    .jamoa{
-        /* overflow-y: scroll; */
+    /* .jamoa{
         width: 200px;
         height: 230px;
         position: relative;
@@ -678,9 +635,6 @@ section h2 span{
             transform: perspective(1000px) rotateY(360deg);
         }
     }
-    /* .jamoa::-webkit-scrollbar{
-        display: none;
-    } */
     .content_j{
         width: 100%;
         height: 100vh;
@@ -710,9 +664,12 @@ section h2 span{
         0 0 25px #FFB900,
         0 0 40px #FFB900,
         0 0 70px #FFB900;
-    }
+    } */
     .b_tittle{
         height: 550px;
+    }
+    .b_tittle2{
+        margin-left: 0;
     }
     .b_input{
         display: flex;
